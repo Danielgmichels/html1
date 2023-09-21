@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario</title>
+</head>
+<body>
+    <!-- 
+        CRUD
+        C reste -> criar
+        R eady -> leitura
+        U pdate -> atualização
+        D elete -> deletar
+     -->
+
+     <!-- 
+        Atributo action -> caminho para onde vai a requisição e envio dos dados preenchidos.
+
+        method -> diz o modo de envio das informações pelo navegador
+        GET -> solicita dados, os dados são exibidos na URL do navegador.
+        POST -> envia dados, os dados não são exibidos na URL do navegador.
+      -->
+      <!-- 
+        Name = parametro
+        value = valor
+       -->
+
+     <form action="contato.php" method="post" autocomplete="off">
+        <label for="masculino">Nome Completo</label>
+        <input type="text" name="nomeCompleto" id="nome">
+        <br>
+
+       
+
+        <!-- Imput para email -->
+        <input type="email" name="email" placeholder="Email">
+        <br>
+
+        <!-- Campo numérico -->
+        <input type="number" name="numero" placeholder="Número">
+        <br>
+
+        <!-- Campo de senha -->
+        <input type="password" placeholder="Senha" name="senha">
+        <br>
+
+        <br>
+        <!-- Input file para enviar arquivos -->
+        <input type="file" name="arquivo">
+        <br>
+
+        <!-- Input file para enviar vários arquivos -->
+        <input type="file" name="arquivos" multiple>
+        <br>
+
+         <!-- value -> input com valor fixo
+        required -> marca o campo como obrigatório
+        readonly -> apenas leitura (O campo é enviado)
+        disable -> desabilita o campo (O campo não é enviado no formulário)-->
+        <input type="text" name="teste1" value="Valor fixo" required readonly>
+        <br>
+
+        <!-- Máximo e minimo -->
+        <label for="">Valor mínimo e máximo</label>
+        <input type="number" min="10" max="25">
+        <br>
+
+        <!-- Máximo de caracteres -->
+        <label for="text" name="maximo" maxlength="8">Tamanho máximo de caracteres</label>
+        <input type="text" name="maximo" maxlength="8">
+        <br>
+
+        <br><br>
+        <!-- Select, lista de dados agrupados -->
+        <select name="estados" required multiple>
+            <option value="" hidden>Selecione um estado</option>
+            <option value="SC">Santa Catarina</option>
+            <option value="RS">Rio Grande do Sul</option>
+            <option value="PR">Paraná</option>
+        </select>
+        <br>
+
+        <!-- Campo oculto -->
+        <input type="hidden" name="id" value="1234">
+        <br>
+
+        <!-- Campo de imagem -->
+        <!-- <input type="image" src="./imagens/ovelha.jpg" alt=""> -->
+        <br>
+
+        <!-- Input para selecionar cor -->
+        <input type="color" name="cor">
+        <br>
+
+        <!-- Textarea, Campo para texto longo, ele permite quebra de linha -->
+        <textarea name="texto" cols="30" rows="10" placeholder="Digite um texto"></textarea>
+
+        
+        <!-- datalist -> Lista de dados -->
+        <input type="text" name="listaDados" list="lista">
+        <datalist id="lista">
+            <option value="item1">item 1</option>
+            <option value="item2">item 2</option>
+            <option value="item3">item 3</option>
+            <option value="item4">item 4</option>
+        </datalist>
+        <br>
+        
+        <!-- Checkbox -> Lista de dados onde posso marcar vários itens -->
+        
+        <input type="checkbox" name="cores[]" id="vermelho" value="vermelho"><label for="vermelho">Vermelho</label>
+        <input type="checkbox" name="cores[]" id="amarelo" value="amarelo"><label for="amarelo">amarelo</label>
+        <input type="checkbox" name="cores[]" id="verde" value="verde"><label for="verde">verde</label>
+        <br>
+        
+        <!-- radio -> Permite a marcação de apenas um item da lista, desde que o name deles sejam iguais -->
+        <input type="radio" name="sexo" value="msculino" id="masculino"><label for="masculino">Masculino</label>
+        <input type="radio" name="sexo" value="feminino" id="feminino"><label for="feminino">Feminino</label>
+        <input type="radio" name="sexo" value="outros" id="outros"><label for="outros">Outros</label>
+        <br>
+        
+
+        <!-- Campo submit -->
+
+        <br><br>
+        <input type="submit" value="Enviar" >
+
+        <button type="submit">Envio com Button</button>
+
+        
+     </form>
+</body>
+</html>
