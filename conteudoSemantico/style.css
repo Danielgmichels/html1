@@ -1,0 +1,52 @@
+@import url('https://fonts.googleapis.com/css2?family=Edu+VIC+WA+NT+Beginner&family=Lexend:wght@100;200;300;400;500;600;700;800;900&family=Roboto:ital,wght@0,100;0,300;0,700;1,100;1,300;1,700&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    font-family: 'Roboto' ;
+}
+/* NAVEGAÇÃO */
+#navegacao{
+    width: 100%;
+    height: 80px;
+    background-color: #c1c1c1;
+}
+#navegacao .navBrand{
+    display: block;
+    float: left;
+    padding: 5px;
+}
+#navegacao ul{
+    float: left;
+}
+#navegacao ul li{
+    display: inline-block;
+}
+#navegacao ul li a{
+    display: block;
+    padding: 31px 10px;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: red;
+    transition: 0.5s ease-out;
+}
+#navegacao ul li a:hover{
+    background-color: #ccc;
+    transition: 0.5s ease-in;
+}
+
+/* CONTEÚDO */
+main{
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 50px 0px;
+}
+#destaques article{
+    width: 22%;
+    display: inline-block;
+    background-color: #ccc;
+    margin: 0 1%;
+}
+#destaques article figure{
+    width: 100px;
+}
