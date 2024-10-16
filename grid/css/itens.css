@@ -1,0 +1,35 @@
+.container{
+    background-color: red;
+    padding: 15px;
+    display: grid;
+    grid-template-columns: auto auto auto;
+}
+
+.container .gridItem{
+    background-color: green;
+    padding: 20px;
+    border: 2px solid yellow;
+}
+
+.item1{
+    grid-column-start: 1;
+    grid-column-end: 4;
+}
+.item2{
+    grid-row-start: 2;
+    grid-row-end: 4;
+}
+.item3{
+    justify-self: end;
+    height: 200px;
+}
+.item5{
+    justify-self: start;
+    height: 200px;
+}
+.item4{
+    align-self: center;
+}
+.item6{
+    align-self: end;
+}
